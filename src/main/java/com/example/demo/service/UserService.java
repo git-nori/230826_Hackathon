@@ -7,7 +7,11 @@ import com.example.demo.model.Users;
 
 public interface UserService {
 
-	/** ユーザー一覧取得 */
+	
+	/**
+	 * ユーザー一覧取得 
+	 * @return
+	 */
 	public Map<String, List<Users>> getUerLists();
 
 }
