@@ -1,10 +1,81 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
 
+<html>
+
+<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		​
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		​
+		<title>QTest</title>
+</head>
+
+<body>
+	<form id="signup-form" method="post" action="/user/signup" class="form-signup" th:object="${signupForm}">
+		<h1 class="text-center" th:text="#{user.signup.title}"></h1>
+		<!-- メンティ番号 -->
+		<h5>メンティ番号</h5>
+		<div class="form-group">
+			<label for="userId" th:text="#{userId}"></label>
+			<input type="text" class="form-control" th:field="*{userId}" th:errorclass="is-invalid" />
+			<div class="invalid-feedback" th:errors="*{userId}"></div>
+		</div>
+		<!-- 姓（漢字） -->
+		<h5>姓（漢字）</h5>
+		<div class="form-group">
+			<label for="first_name" th:text="#{first_name}"></label>
+			<input type="text" class="form-control" th:field="*{first_name}" th:errorclass="is-invalid" />
+			<div class="invalid-feedback" th:errors="*{first_name}"></div>
+		</div>
+		<!-- 姓（カナ） -->
+		<h5>姓（カナ）</h5>
+		<div class="form-group">
+			<label for="first_name_kana" th:text="#{first_name_kana}"></label>
+			<input type="text" class="form-control" th:field="*{first_name_kana}" th:errorclass="is-invalid" />
+			<div class="invalid-feedback" th:errors="*{first_name_kana}"></div>
+		</div>
+		<!-- 名（漢字） -->
+		<h5>名（漢字）</h5>
+		<div class="form-group">
+			<label for="last_name" th:text="#{last_name}"></label>
+			<input type="text" class="form-control" th:field="*{last_name}" th:errorclass="is-invalid" />
+			<div class="invalid-feedback" th:errors="*{last_name}"></div>
+		</div>
+		<!-- 名（カナ） -->
+		<h5>名（カナ）</h5>
+		<div class="form-group">
+			<label for="last_name_kana" th:text="#{last_name_kana}"></label>
+			<input type="text" class="form-control" th:field="*{last_name_kana}" th:errorclass="is-invalid" />
+			<div class="invalid-feedback" th:errors="*{last_name_kana}"></div>
+		</div>
+		<!-- 性格タイプ -->
+		<h5>性格タイプ</h5>
+		<div class="form-group">
+			<label for="character_type" th:text="#{character_type}"></label>
+			<input type="text" class="form-control" th:field="*{character_type}" th:errorclass="is-invalid" />
+			<div class="invalid-feedback" th:errors="*{character_type}"></div>
+		</div>
+		<!-- タイプ -->
+		<h5>タイプ</h5>
+		<div class="form-group">
+			<label for="character_type_meta" th:text="#{character_type_meta}"></label>
+			<input type="text" class="form-control" th:field="*{character_type_meta}" th:errorclass="is-invalid" />
+			<div class="invalid-feedback" th:errors="*{character_type_meta}"></div>
+		</div>
+		<!-- 登録ボタン -->
+		<input type="submit" value="登録" class="btn btn-primary w-100 mt-3" />
+	</form>
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
 </body>
+
 </html>
