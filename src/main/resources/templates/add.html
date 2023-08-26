@@ -17,56 +17,48 @@
 </head>
 
 <body>
-	<form id="signup-form" method="post" action="/user/signup" class="form-signup" th:object="${signupForm}">
-		<h1 class="text-center" th:text="#{user.signup.title}"></h1>
+	<form id="add-form" method="post" action="/add" class="form-add" th:object="${addForm}">
 		<!-- メンティ番号 -->
 		<h5>メンティ番号</h5>
 		<div class="form-group">
 			<label for="userId" th:text="#{userId}"></label>
-			<input type="text" class="form-control" th:field="*{userId}" th:errorclass="is-invalid" />
-			<div class="invalid-feedback" th:errors="*{userId}"></div>
+			<input type="text" class="form-control" th:field="*{userId}"/>
 		</div>
 		<!-- 姓（漢字） -->
 		<h5>姓（漢字）</h5>
 		<div class="form-group">
 			<label for="first_name" th:text="#{first_name}"></label>
-			<input type="text" class="form-control" th:field="*{first_name}" th:errorclass="is-invalid" />
-			<div class="invalid-feedback" th:errors="*{first_name}"></div>
+			<input type="text" class="form-control" th:field="*{first_name}"/>
 		</div>
 		<!-- 姓（カナ） -->
 		<h5>姓（カナ）</h5>
 		<div class="form-group">
 			<label for="first_name_kana" th:text="#{first_name_kana}"></label>
-			<input type="text" class="form-control" th:field="*{first_name_kana}" th:errorclass="is-invalid" />
-			<div class="invalid-feedback" th:errors="*{first_name_kana}"></div>
+			<input type="text" class="form-control" th:field="*{first_name_kana}" />
 		</div>
 		<!-- 名（漢字） -->
 		<h5>名（漢字）</h5>
 		<div class="form-group">
 			<label for="last_name" th:text="#{last_name}"></label>
-			<input type="text" class="form-control" th:field="*{last_name}" th:errorclass="is-invalid" />
-			<div class="invalid-feedback" th:errors="*{last_name}"></div>
+			<input type="text" class="form-control" th:field="*{last_name}"  />
 		</div>
 		<!-- 名（カナ） -->
 		<h5>名（カナ）</h5>
 		<div class="form-group">
 			<label for="last_name_kana" th:text="#{last_name_kana}"></label>
-			<input type="text" class="form-control" th:field="*{last_name_kana}" th:errorclass="is-invalid" />
-			<div class="invalid-feedback" th:errors="*{last_name_kana}"></div>
+			<input type="text" class="form-control" th:field="*{last_name_kana}" />
 		</div>
 		<!-- 性格タイプ -->
 		<h5>性格タイプ</h5>
 		<div class="form-group">
 			<label for="character_type" th:text="#{character_type}"></label>
-			<input type="text" class="form-control" th:field="*{character_type}" th:errorclass="is-invalid" />
-			<div class="invalid-feedback" th:errors="*{character_type}"></div>
+			<input type="text" class="form-control" th:field="*{character_type}" />
 		</div>
 		<!-- タイプ -->
 		<h5>タイプ</h5>
 		<div class="form-group">
 			<label for="character_type_meta" th:text="#{character_type_meta}"></label>
-			<input type="text" class="form-control" th:field="*{character_type_meta}" th:errorclass="is-invalid" />
-			<div class="invalid-feedback" th:errors="*{character_type_meta}"></div>
+			<input type="text" class="form-control" th:field="*{character_type_meta}"  />
 		</div>
 		<!-- 登録ボタン -->
 		<input type="submit" value="登録" class="btn btn-primary w-100 mt-3" />

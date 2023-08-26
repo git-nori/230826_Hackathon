@@ -14,4 +14,6 @@ public interface UserService {
 	 */
 	public Map<String, List<Users>> getUerLists();
 
+	/** ユーザー登録 */
+	public void insertUser(Users user);
 }

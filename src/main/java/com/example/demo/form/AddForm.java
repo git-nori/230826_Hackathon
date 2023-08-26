@@ -1,12 +1,12 @@
-package com.example.demo.model;
+package com.example.demo.form;
 
-import java.util.Date;
+import java.security.Timestamp;
 
 import lombok.Data;
 
 @Data
-public class Users {
-
+public class AddForm {
+	
 	private int userId;
 	private String firstName;
 	private String firstNameKana;
@@ -14,7 +14,6 @@ public class Users {
 	private String lastNameKana;
 	private String characterType;
 	private String characterTypeMeta;
-	private Date createdAt;
-	private String craetedAt;
+	private Timestamp craetedAt;
 
 }

@@ -1,5 +1,7 @@
 package com.example.demo.service.impl;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -27,6 +29,19 @@ public class UserServiceImpl implements UserService {
 				.collect(Collectors.groupingBy(i -> i.getCharacterType()));
 
 		return userListMap;
+	}
+
+	/** ユーザー登録 */
+	@Override
+	public void insertUser(Users user) {
+
+		Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String formattedTimestamp = sdf.format(timestamp);
+		user.setCraetedAt(formattedTimestamp);
+
+		userMapper.insertUser(user);
 	}
 
 }
