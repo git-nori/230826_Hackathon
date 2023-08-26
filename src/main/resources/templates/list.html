@@ -23,21 +23,22 @@
 					<th scope="col"></th>
 ​
 					<th scope="col">
-						<div class="accordion" id="accordionExample">
+						<div class="accordion" id="accordionCol">
 							<div class="accordion-item">
 								<h2 class="accordion-header">
 									<button class="accordion-button" type="button" data-bs-toggle="collapse"
-										data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
 										ENTP
 									</button>
 								</h2>
-								<div id="collapseOne" class="accordion-collapse collapse show"
-									data-bs-parent="#accordionExample">
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
 									<div class="accordion-body">
 										<ul>
-											<li>佐藤 博紀</li>
-											<li>金子 竜大</li>
-											<li>大矢 恭輔</li>
+											<li th:each="element, elementStat : ${userListMap.get('ENTP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
 										</ul>
 									</div>
 								</div>
@@ -45,65 +46,457 @@
 						</div>
 					</th>
 					<th scope="col">
-						<div class="accordion" id="intpCol">
+						<div class="accordion" id="accordionCol">
 							<div class="accordion-item">
 								<h2 class="accordion-header">
 									<button class="accordion-button" type="button" data-bs-toggle="collapse"
-										data-bs-target="#collapseIntpCol" aria-expanded="true"
-										aria-controls="collapseIntpCol">
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
 										INTP
 									</button>
 								</h2>
-								<div id="collapseIntpCol" class="accordion-collapse collapse show"
-									data-bs-parent="#intpCol">
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
 									<div class="accordion-body">
 										<ul>
-											<li>萩原 しゅん</li>
-											<li>松崎 みちる</li>
+											<li th:each="element, elementStat : ${userListMap.get('INTP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
 										</ul>
 									</div>
 								</div>
 							</div>
 						</div>
 					</th>
-					<th scope="col">ENTJ</th>
-					<th scope="col">INTJ</th>
+					<th scope="col">
+						<div class="accordion" id="accordionCol">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
+										ENTJ
+									</button>
+								</h2>
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ENTJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>						
+					</th>
+					<th scope="col">
+						<div class="accordion" id="accordionCol">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
+										INTJ
+									</button>
+								</h2>
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('INTJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>						
+					</th>
 ​
-					<th scope="col">ENFP</th>
-					<th scope="col">INFP</th>
-					<th scope="col">ENFJ</th>
-					<th scope="col">INFJ</th>
+					<th scope="col">
+						<div class="accordion" id="accordionCol">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
+										ENFP
+									</button>
+								</h2>
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ENFP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>						
+					</th>
+					<th scope="col">
+						<div class="accordion" id="accordionCol">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
+										INFP
+									</button>
+								</h2>
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('INFP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
+					<th scope="col">
+						<div class="accordion" id="accordionCol">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
+										ENFJ
+									</button>
+								</h2>
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ENFJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
+					<th scope="col">
+						<div class="accordion" id="accordionCol">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
+										INFJ
+									</button>
+								</h2>
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('INFJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
 ​
-					<th scope="col">ESTJ</th>
-					<th scope="col">ISTJ</th>
-					<th scope="col">ESFJ</th>
-					<th scope="col">ISFJ</th>
+					<th scope="col">
+						<div class="accordion" id="accordionCol">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
+										ESTJ
+									</button>
+								</h2>
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ESTJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
+					<th scope="col">
+						<div class="accordion" id="accordionCol">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
+										ISTJ
+									</button>
+								</h2>
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ISTJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
+					<th scope="col">
+						<div class="accordion" id="accordionCol">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
+										ESFJ
+									</button>
+								</h2>
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ESFJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
+					<th scope="col">
+						<div class="accordion" id="accordionCol">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
+										ISFJ
+									</button>
+								</h2>
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ISFJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
 ​
-					<th scope="col">ESTP</th>
-					<th scope="col">ESFP</th>
-					<th scope="col">ISTP</th>
-					<th scope="col">ISFP</th>
+					<th scope="col">
+						<div class="accordion" id="accordionCol">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
+										ESTP
+									</button>
+								</h2>
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ESTP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
+					<th scope="col">
+						<div class="accordion" id="accordionCol">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
+										ESFP
+									</button>
+								</h2>
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ESFP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
+					<th scope="col">
+						<div class="accordion" id="accordionCol">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
+										ISTP
+									</button>
+								</h2>
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ISTP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
+					<th scope="col">
+						<div class="accordion" id="accordionCol">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseCol" aria-expanded="true"
+										aria-controls="collapseCol">
+										ISFP
+									</button>
+								</h2>
+								<div id="collapseCol" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionCol">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ISFP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<th scope="row">
-						<div class="accordion" id="accordionExampleRow">
+						<div class="accordion" id="accordionRow">
 							<div class="accordion-item">
 								<h2 class="accordion-header">
 									<button class="accordion-button" type="button" data-bs-toggle="collapse"
-										data-bs-target="#collapseOneRow" aria-expanded="true"
-										aria-controls="collapseOneRow">
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
 										ENTP
 									</button>
 								</h2>
-								<div id="collapseOneRow" class="accordion-collapse collapse show"
-									data-bs-parent="#accordionExampleRow">
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
 									<div class="accordion-body">
 										<ul>
-											<li>佐藤 博紀</li>
-											<li>金子 竜大</li>
-											<li>大矢 恭輔</li>
+											<li th:each="element, elementStat : ${userListMap.get('ENTP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
+​
+					<td>4</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>3</td>
+					<td>3</td>
+					<td>2</td>
+					<td>2</td>
+					<td>2</td>
+					<td>2</td>
+					<td>4</td>
+					<td bgcolor="#ff0000">1</td>
+					<td>4</td>
+					<td>3</td>
+					<td>4</td>
+					<td bgcolor="#ffff00">5</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						<div class="accordion" id="accordionRow">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
+										INTP
+									</button>
+								</h2>
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('INTP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
+					<td>4</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						<div class="accordion" id="accordionRow">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
+										ENTJ
+									</button>
+								</h2>
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ENTJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
 										</ul>
 									</div>
 								</div>
@@ -129,7 +522,71 @@
 					<td>3</td>
 				</tr>
 				<tr>
-					<th scope="row">INTP</th>
+					<th scope="row">
+						<div class="accordion" id="accordionRow">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
+										INTJ
+									</button>
+								</h2>
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('INTJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
+
+					<td>4</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<th scope="row">
+						<div class="accordion" id="accordionRow">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
+										ENFP
+									</button>
+								</h2>
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ENFP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
 ​
 					<td>4</td>
 					<td>3</td>
@@ -149,7 +606,29 @@
 					<td>3</td>
 				</tr>
 				<tr>
-					<th scope="row">ENTJ</th>
+					<th scope="row">
+						<div class="accordion" id="accordionRow">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
+										INFP
+									</button>
+								</h2>
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('INFP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
 ​
 					<td>4</td>
 					<td>3</td>
@@ -169,7 +648,29 @@
 					<td>3</td>
 				</tr>
 				<tr>
-					<th scope="row">INTJ</th>
+					<th scope="row">
+						<div class="accordion" id="accordionRow">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
+										ENFJ
+									</button>
+								</h2>
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ENFJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
 ​
 					<td>4</td>
 					<td>3</td>
@@ -189,7 +690,29 @@
 					<td>3</td>
 				</tr>
 				<tr>
-					<th scope="row">ENFP</th>
+					<th scope="row">
+						<div class="accordion" id="accordionRow">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
+										INFJ
+									</button>
+								</h2>
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('INFJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
 ​
 					<td>4</td>
 					<td>3</td>
@@ -209,7 +732,29 @@
 					<td>3</td>
 				</tr>
 				<tr>
-					<th scope="row">INFP</th>
+					<th scope="row">
+						<div class="accordion" id="accordionRow">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
+										ESTJ
+									</button>
+								</h2>
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ESTJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
 ​
 					<td>4</td>
 					<td>3</td>
@@ -229,7 +774,29 @@
 					<td>3</td>
 				</tr>
 				<tr>
-					<th scope="row">ENFJ</th>
+					<th scope="row">
+						<div class="accordion" id="accordionRow">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
+										ISTJ
+									</button>
+								</h2>
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ISTJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
 ​
 					<td>4</td>
 					<td>3</td>
@@ -249,7 +816,29 @@
 					<td>3</td>
 				</tr>
 				<tr>
-					<th scope="row">INFJ</th>
+					<th scope="row">
+						<div class="accordion" id="accordionRow">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
+										ESFJ
+									</button>
+								</h2>
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ESFJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
 ​
 					<td>4</td>
 					<td>3</td>
@@ -269,7 +858,29 @@
 					<td>3</td>
 				</tr>
 				<tr>
-					<th scope="row">ESTJ</th>
+					<th scope="row">
+						<div class="accordion" id="accordionRow">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
+										ISFJ
+									</button>
+								</h2>
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ISFJ')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
 ​
 					<td>4</td>
 					<td>3</td>
@@ -289,7 +900,29 @@
 					<td>3</td>
 				</tr>
 				<tr>
-					<th scope="row">ISTJ</th>
+					<th scope="row">
+						<div class="accordion" id="accordionRow">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
+										ESTP
+									</button>
+								</h2>
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ESTP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
 ​
 					<td>4</td>
 					<td>3</td>
@@ -309,7 +942,29 @@
 					<td>3</td>
 				</tr>
 				<tr>
-					<th scope="row">ESFJ</th>
+					<th scope="row">
+						<div class="accordion" id="accordionRow">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
+										ESFP
+									</button>
+								</h2>
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ESFP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
 ​
 					<td>4</td>
 					<td>3</td>
@@ -329,7 +984,29 @@
 					<td>3</td>
 				</tr>
 				<tr>
-					<th scope="row">ISFJ</th>
+					<th scope="row">
+						<div class="accordion" id="accordionRow">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
+										ISTP
+									</button>
+								</h2>
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ISTP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>​
 ​
 					<td>4</td>
 					<td>3</td>
@@ -349,68 +1026,29 @@
 					<td>3</td>
 				</tr>
 				<tr>
-					<th scope="row">ESTP</th>
-​
-					<td>4</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-				</tr>
-				<tr>
-					<th scope="row">ESFP</th>
-​
-					<td>4</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-				</tr>
-				<tr>
-					<th scope="row">ISTP</th>
-​
-​
-					<td>4</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-					<td>3</td>
-				</tr>
-				<tr>
-					<th scope="row">ISFP</th>
+					<th scope="row">
+						<div class="accordion" id="accordionRow">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseRow" aria-expanded="true"
+										aria-controls="collapseRow">
+										ISFP
+									</button>
+								</h2>
+								<div id="collapseRow" class="accordion-collapse collapse show"
+									data-bs-parent="#accordionRow">
+									<div class="accordion-body">
+										<ul>
+											<li th:each="element, elementStat : ${userListMap.get('ISFP')}" >
+												<span th:text="${element.firstName} + ' ' + ${element.lastName}"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</th>
 ​
 					<td>4</td>
 					<td>3</td>
